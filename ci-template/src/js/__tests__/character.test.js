@@ -3,7 +3,13 @@ import {Character} from '../character';
 
 test('case: object create warman', () => {
   const result = new Character('GOGI', 'Bowman');
-  expect(result.name).toBe('GOGI');
+    const obraz = {
+    name: 'GOGI',
+    type:'Bowman',
+    health: 100,
+    level: 1
+  }
+  expect(result).toEqual(obraz);
 });
 
 test('case: length name object warman > 10', () => {
